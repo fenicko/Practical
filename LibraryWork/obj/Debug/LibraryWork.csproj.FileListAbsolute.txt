@@ -1,0 +1,12 @@
+C:\Projects\C#\Практика\LibraryWork\bin\Debug\LibraryWork.dll
+C:\Projects\C#\Практика\LibraryWork\bin\Debug\LibraryWork.pdb
+C:\Projects\C#\Практика\LibraryWork\obj\Debug\LibraryWork.csproj.AssemblyReference.cache
+C:\Projects\C#\Практика\LibraryWork\obj\Debug\LibraryWork.csproj.CoreCompileInputs.cache
+C:\Projects\C#\Практика\LibraryWork\obj\Debug\LibraryWork.dll
+C:\Projects\C#\Практика\LibraryWork\obj\Debug\LibraryWork.pdb
+C:\Projects\C#\Практика\Task_1\LibraryWork\bin\Debug\LibraryWork.dll
+C:\Projects\C#\Практика\Task_1\LibraryWork\bin\Debug\LibraryWork.pdb
+C:\Projects\C#\Практика\Task_1\LibraryWork\obj\Debug\LibraryWork.csproj.AssemblyReference.cache
+C:\Projects\C#\Практика\Task_1\LibraryWork\obj\Debug\LibraryWork.csproj.CoreCompileInputs.cache
+C:\Projects\C#\Практика\Task_1\LibraryWork\obj\Debug\LibraryWork.dll
+C:\Projects\C#\Практика\Task_1\LibraryWork\obj\Debug\LibraryWork.pdb
