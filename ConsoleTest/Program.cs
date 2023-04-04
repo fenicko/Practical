@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using LibraryWork;
+﻿using LibraryWork;
+using System;
 
 namespace ConsoleTest
 {
@@ -12,36 +7,28 @@ namespace ConsoleTest
     {
         static void Main(string[] args)
         {
-            bool isOpen = true;
+            var inputNumber = ReadNumberFromConsole("Введите число: ");
+            var numberLine = StringN.GetIntLine(inputNumber);
+            Console.WriteLine(numberLine);
 
-            Console.WriteLine("Введите \"exit\" для выхода");
+            inputNumber = ReadNumberFromConsole("Введите размер стороны: ");
+            var numberSideSize = StringN.GetIntLine(inputNumber);
+            Console.WriteLine(numberSideSize);
+        }
 
-            while (isOpen == true)
-            {
-                Console.Write("Введите число: ");
-                string n = Console.ReadLine();
 
-                StringN sdStringN = new StringN();
+        /// <summary>
+        /// Преобразование числа в int из консоли
+        /// </summary>
+        /// <param name="message">Собщение для пользователя</param>
+        /// <returns>Заданное количство последоваительности</returns>
+        private static int ReadNumberFromConsole(string message)
+        {
+            Console.Write(message);
+            string inputLine = Console.ReadLine();
 
-                if (n == "exit")
-                {
-                    isOpen = false;
-                }
-                else
-                {
-                    string numberLine = sdStringN.GetIntLine(n);
-                    Console.WriteLine(numberLine);
-
-                    Console.WriteLine();
-
-                    string latticesLine = sdStringN.GetIntLattices(n);
-                    Console.WriteLine(latticesLine);
-
-                    Console.WriteLine();
-                }
-            }
-
-            Console.ReadKey();
+            bool isInt = !int.TryParse(inputLine, out int number);
+            return number;
         }
     }
 }
