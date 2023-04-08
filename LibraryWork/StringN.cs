@@ -22,11 +22,11 @@ namespace LibraryWork
         /// </summary>
         /// <param name="getN">Переменная задающая количество символов</param>
         /// <returns>Последовательность чисел</returns>
-        public static string GetIntLine(int getN)
+        public static string GetSequence(int getN)
         {
             try
             {
-                if (getN == 0)
+                if (getN == minValue)
                 {
                     throw new ArgumentNullException(null, "Error: Введите целое число больше 0!");
                 }
@@ -35,14 +35,7 @@ namespace LibraryWork
 
                 for (int i = 1; i <= getN; i++)
                 {
-                    if (i < getN)
-                    {
-                        returnLine += $"{i}, ";
-                    }
-                    if (i == getN)
-                    {
-                        returnLine += $"{i}.";
-                    }
+                    returnLine += (i < getN) ? $"{i}, " : $"{i}.";
                 }
 
                 return returnLine;
@@ -56,13 +49,13 @@ namespace LibraryWork
         /// <summary>
         /// Метод рисующий квадрат
         /// </summary>
-        /// <param name="getN">Переменная задающая рамер сторон квадрата</param>
+        /// <param name="getSize">Переменная задающая рамер сторон квадрата</param>
         /// <returns>Квадрат с вырезанными углами и центром</returns>
-        public string GetIntLattices(int getN)
+        public static string GetSquary(int getSize)
         {
             try
             {
-                if (getN == 0 && getN % 2 == 0)
+                if (getSize == minValue && getSize % Divider == minValue)
                 {
                     throw new ArgumentNullException(null, "Error: Введите целое нечетное чиcло больше 0!");
                 }
@@ -85,13 +78,14 @@ namespace LibraryWork
                 */
 
                 string outputLine = "";
-                int lastIndex = getN - 1;
+                int lastIndex = getSize - 1;
 
-                for (int i = 0; i < getN; i++)
+                for (var i = 0; i < getSize; i++)
                 {
-                    for (int j = 0; j < getN; j++)
+                    for (var j = 0; j < getSize; j++)
                     {
-                        outputLine += (i == minValue && j == minValue) || (i == minValue && j == lastIndex) || (i == lastIndex && j == minValue) || (i == lastIndex && j == lastIndex) || (i == (lastIndex) / Divider && j == (lastIndex) / Divider) ? " " : "#";
+                        outputLine += (i == minValue && j == minValue) || (i == minValue && j == lastIndex) || (i == lastIndex && j == minValue) || 
+                                      (i == lastIndex && j == lastIndex) || (i == lastIndex / Divider && j == lastIndex / Divider) ? " " : "#";
                     }
 
                     outputLine += "\n";

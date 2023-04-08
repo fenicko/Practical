@@ -8,17 +8,19 @@ namespace ConsoleTest
         static void Main(string[] args)
         {
             var inputNumber = ReadNumberFromConsole("Введите число: ");
-            var numberLine = StringN.GetIntLine(inputNumber);
+            var numberLine = StringN.GetSequence(inputNumber);
             Console.WriteLine(numberLine);
 
             inputNumber = ReadNumberFromConsole("Введите размер стороны: ");
-            var numberSideSize = StringN.GetIntLine(inputNumber);
+            var numberSideSize = StringN.GetSquary(inputNumber);
             Console.WriteLine(numberSideSize);
+
+            Console.ReadKey();
         }
 
 
         /// <summary>
-        /// Преобразование числа в int из консоли
+        /// Считывает число из консоли
         /// </summary>
         /// <param name="message">Собщение для пользователя</param>
         /// <returns>Заданное количство последоваительности</returns>
